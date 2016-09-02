@@ -10,6 +10,11 @@ class CreateUsers < ActiveRecord::Migration
   # :precision => number
   # :scale => number
   # :default => ""
+
+  #-------OPTIONS for index---------
+  # :unique => true/false
+  # :name => "your_custom_name"
+
   def up
     create_table :users do |t|
       #t.column "name", :type, options
