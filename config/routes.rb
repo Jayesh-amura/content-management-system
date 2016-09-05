@@ -14,7 +14,7 @@ Rails.application.routes.draw do
             #OR
   #match "demo/index",:to => "demo#index",:via => :get
   #if get /students/edit/52
-  match ":controller(/:action(/:id(.:format)))",:via => :get
+  match ":controller(/:action(/:id(.:format)))",:via => [:get, :post]
 
 
   # The priority is based upon order of creation: first created -> highest priority.
