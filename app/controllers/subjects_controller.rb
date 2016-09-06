@@ -46,7 +46,7 @@ class SubjectsController < ApplicationController
     else
     # If update fails, redisplay the form so user can fix problems
       @subject_count = Subject.count
-      render('new')
+      render('edit')
     end
   end
 

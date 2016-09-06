@@ -1,5 +1,8 @@
 class Subject < ActiveRecord::Base
 	has_many :pages
+
+	validates_presence_of :name
+
 	scope :visible, lambda { where(:visible => true) }
 	scope :invisible, lambda { where(:invisible => false) }
 	scope :sorted, lambda { order("subjects.position ASC") }
