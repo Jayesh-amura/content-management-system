@@ -20,4 +20,7 @@ class DemoController < ApplicationController
   	redirect_to("https://mail.google.com/mail/#inbox")
   end
 
+  def text_helpers
+  end
+
 end
