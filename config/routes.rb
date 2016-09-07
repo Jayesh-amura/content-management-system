@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
+  # get 'access/login'
+
   root :to => "demo#index"
+  get 'admin', :to => 'access#index'
+
   #get 'demo/index'
             #OR
   #match "demo/index",:to => "demo#index",:via => :get
