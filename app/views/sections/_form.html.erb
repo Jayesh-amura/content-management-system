@@ -1,8 +1,10 @@
 <%= error_messages_for(@section) %>
+
 <table summary="Section form fields">
   <tr>
-    <th><%= f.label(:page_id, "Page ID") %></th>
-    <td><%= f.select(:page_id, @pages.collect{|p| [p.name, p.id]}) %></td>
+    <th><%= f.label(:page_id, "Page") %></th>
+    <td><%= f.select(:page_id, @pages.collect {|p| [p.name, p.id]}) %>
+</td>
   </tr>
   <tr>
     <th><%= f.label(:name) %></th>
@@ -19,8 +21,8 @@
   <tr>
     <th><%= f.label(:content_type) %></th>
     <td>
-      <%= f.radio_button(:content_type, "text") %> text
-      <%= f.radio_button(:content_type, "HTML") %> HTML
+      <%= f.radio_button(:content_type, 'text') %> Text
+      <%= f.radio_button(:content_type, 'HTML') %> HTML
     </td>
   </tr>
   <tr>

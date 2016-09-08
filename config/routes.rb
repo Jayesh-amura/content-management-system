@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  # get 'access/login'
-
-  root :to => "demo#index"
+  root "public#index"
+  get "show/:permalink", :to => 'public#show'
+  # root :to => "demo#index"
   get 'admin', :to => 'access#index'
 
   #get 'demo/index'

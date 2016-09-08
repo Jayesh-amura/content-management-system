@@ -1,4 +1,5 @@
 <%= error_messages_for(@subject) %>
+
 <table summary="Subject form fields">
   <tr>
     <th><%= f.label(:name, "Name") %></th>
@@ -16,6 +17,4 @@
     <th><%= f.label(:created_at) %></th>
     <td><%= f.datetime_select(:created_at, :order => [:month, :day, :year]) %></td>
   </tr>
-
-
 </table>
