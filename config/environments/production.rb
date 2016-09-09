@@ -46,8 +46,28 @@ Rails.application.configure do
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
-  config.log_level = :info
+  # config.log_level = :info
   config.log_level = :debug
+# Rails.application.config.middleware.use ExceptionNotification::Rack,
+#   :email => {
+#     :deliver_with => :deliver, # Rails >= 4.2.1 do not need this option since it defaults to :deliver_now
+#     :email_prefix => "[PREFIX] ",
+#     :sender_address => %{"notifier" <notifier@example.com>},
+#     :exception_recipients => %w{exceptions@example.com}
+#   }
+
+
+
+#   config.action_mailer.delivery_method = :sendmail
+# # Defaults to:
+# # config.action_mailer.sendmail_settings = {
+# #   :location => '/usr/sbin/sendmail',
+# #   :arguments => '-i -t'
+# # }
+# config.action_mailer.perform_deliveries = true
+# config.action_mailer.raise_delivery_errors = true
+
+
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
