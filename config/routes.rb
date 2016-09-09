@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   get "show/:permalink", :to => 'public#show'
   # root :to => "demo#index"
   get 'admin', :to => 'access#index'
-
+  resources :subjects do
+    resources :pages
+  end
+  #resources :pages
   #get 'demo/index'
             #OR
   #match "demo/index",:to => "demo#index",:via => :get
